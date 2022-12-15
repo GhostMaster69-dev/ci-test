@@ -1,0 +1,11 @@
+container:
+    image: 31482281/ubuntu:rolling
+    cpu: 8
+    memory: 32G
+
+task:
+    name: Build Rom
+    timeout_in: 120m
+    build_script:
+       - set env
+       - bash build_rom.sh
