@@ -1,5 +1,5 @@
 container:
-    image: 31482281/ubuntu:rolling
+    image: 31482281/ubuntu:latest
     cpu: 8
     memory: 32G
 
@@ -8,4 +8,4 @@ task:
     timeout_in: 120m
     build_script:
        - set env
-       - bash build_rom.sh
+       - ./build_rom.sh
