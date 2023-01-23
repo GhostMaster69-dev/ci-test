@@ -4,6 +4,6 @@ task:
     image: 31482281/ubuntu:cirrus
     cpu: 8
     memory: 32G
-  timeout_in: 120m
+  timeout_in: 240m
   sync_script: ./sync.sh 
   build_script: ./build_rom.sh
