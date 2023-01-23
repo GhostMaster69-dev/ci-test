@@ -1,11 +1,13 @@
-container:
+env:
+  CIRRUS_CLONE_DEPTH: 1
+  BUILD_HOSTNAME: "cloudshell"
+
+task:
+  name: Cirrus CI Rom Builder
+  container:
     image: 31482281/ubuntu:latest
     cpu: 8
     memory: 32G
-
-task:
-    name: Build Rom
     timeout_in: 120m
-    build_script:
-       - set env
-       - ./build_rom.sh
+  env_script: env
+  build_script: ./build_rom.sh
