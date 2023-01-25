@@ -5,7 +5,7 @@ mkdir ~/octavi && cd ~/octavi
 export CCACHE_DIR=~/ccache/octavi/vince
 export CCACHE_EXEC=$(which ccache)
 export USE_CCACHE=1
-ccache -M 250G
+ccache -M 50G
 ccache -z
 
 # Git
