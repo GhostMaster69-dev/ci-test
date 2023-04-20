@@ -12,3 +12,4 @@ task:
   setup_script: set env && ./setup.sh
   sync_script: ./sync.sh 
   build_script: ./build_rom.sh
+  push_script: ./push.sh

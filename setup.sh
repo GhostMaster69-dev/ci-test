@@ -2,7 +2,7 @@
 mkdir ~/octavi && cd ~/octavi
 
 # Cache setup
-export CCACHE_DIR=~/ccache/octavi/vince
+export CCACHE_DIR=~/octavi/ccache/vince
 export CCACHE_EXEC=$(which ccache)
 export USE_CCACHE=1
 ccache -M 100G
