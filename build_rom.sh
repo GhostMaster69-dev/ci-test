@@ -6,5 +6,5 @@ cd ~/arrow
 lunch arrow_vince-user
 #mka bootimage -j$(nproc --all)
 #mka sepolicy -j$(nproc --all)
-mma ParanoidDoze
+mma XiaomiDoze -j$(nproc --all)
 
