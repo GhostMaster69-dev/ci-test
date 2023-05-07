@@ -1,10 +1,10 @@
 # Rom Dir
-cd ~/octavi
+cd ~/derpfest
 
 # Make Rom
 source build/envsetup.sh
-lunch octavi_vince-user
+lunch derp_vince-user
 #mka bootimage -j$(nproc --all)
 #mka sepolicy -j$(nproc --all)
-mma SystemUI
+mma XiaomiDirac
 
