@@ -3,9 +3,9 @@
 # Rom dir
 cd ~/octavi
 
-# sync rom
-repo init -u https://github.com/Octavi-Staging/manifest.git -b thirteen
-git clone https://github.com/GhostMaster69-dev/local_manifest.git -b 13 .repo/local_manifests
-repo sync --no-clone-bundle --no-tags --current-branch --force-sync --force-remove-dirty --jobs=$(nproc --all) --jobs-checkout=$(nproc --all) --jobs-network=$(nproc --all)
-#rm -rf kernel/xiaomi/vince
-#git clone https://github.com/AOSP-Silicon/kernel_xiaomi_vince kernel/xiaomi/vince --depth=1
+# Initialize local repository
+repo init --no-repo-verify -u https://github.com/Octavi-Staging/manifest -b thirteen --git-lfs -g default,-mips,-darwin,-notdefault
+git clone https://github.com/AOSP-Silicon/local_manifest.git --depth 1 -b 13 .repo/local_manifests
+
+# Sync
+repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j$(nproc --all)
